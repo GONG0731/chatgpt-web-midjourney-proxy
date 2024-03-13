@@ -30,11 +30,11 @@ export function useTheme() {
 
   watch(
     () => isDark.value,
-    (dark) => {
-      if (dark)
-        document.documentElement.classList.add('dark')
+    (light) => {
+      if (light)
+        document.documentElement.classList.add('light')
       else
-        document.documentElement.classList.remove('dark')
+        document.documentElement.classList.remove('light')
     },
     { immediate: true },
   )
